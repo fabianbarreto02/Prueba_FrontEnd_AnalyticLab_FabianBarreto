@@ -1,0 +1,36 @@
+.roundedCorner
+{
+  
+  width:96%;height:100%;
+  border: solid 0px #555;
+  background-color: rgb(252, 252, 250);
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 8px -8px 5px  rgba(0,0,0,0.6);
+  -moz-box-shadow: 10px -10px 5px  rgba(0,0,0,0.6);
+  -webkit-box-shadow: 10px -10px 5px  rgba(0,0,0,0.6);
+  -o-box-shadow: 10px -10px 5px  rgba(0,0,0,0.6);
+  border-radius:8px;
+}
+.columna {
+    width:60%;
+    float:left;
+  }
+
+.columna2 {
+    width:40%;
+    float:left;
+  } 
+  
+  @media (max-width: 90%) {
+    
+    .columna {
+      width:auto;
+      float:none;
+    }
+    .columna2 {
+        width:auto;
+        float:none;
+      }
+    
+  }

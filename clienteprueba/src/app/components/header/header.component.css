@@ -71,7 +71,7 @@
 /* Carousel banner */
 /* Declare heights because of positioning of img element */
 .carousel .item {
-  height: 500px;
+  height: 400px;
   background-color:#555;
 }
 .carousel img {
@@ -109,20 +109,20 @@
     font-size: 14px;
     padding: 13px 30px;
     border-radius: 5px;
-    border: 1px solid #b40028 ;
+    border: 1px solid #ffffff ;
     min-width: 200px;
     display: inline-block;
     text-align: center;
     position: relative;
     z-index: 1;
-    color: #b40028 ;
+    color: #ffffff ;
     background-color:transparent;
     transition: all .25s ease-in-out;
     margin: 10px 0px 10px 0px;
     
 }
 .site-btn:hover {
-    background: #b40028 ;
+    background: #3000b4 ;
     border: 1px solid #fff;
     font-weight:700px;
     
