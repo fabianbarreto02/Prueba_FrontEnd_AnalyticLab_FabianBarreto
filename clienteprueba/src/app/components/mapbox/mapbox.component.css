@@ -1,0 +1,9 @@
+#mapa-mapbox {
+    width: 99%;
+    height: 500px;
+    background-color: aliceblue;
+    position: relative;
+    top: 0; 
+    bottom: 0;
+    padding: 1%;
+}

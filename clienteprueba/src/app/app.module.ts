@@ -1,11 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { BodyComponent } from './components/body/body.component';
 import { MapboxComponent } from './components/mapbox/mapbox.component';
+
+import {GetlayerService} from './services/get_layer.service';
 
 @NgModule({
   declarations: [
@@ -16,9 +20,12 @@ import { MapboxComponent } from './components/mapbox/mapbox.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    GetlayerService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
