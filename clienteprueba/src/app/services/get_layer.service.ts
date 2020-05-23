@@ -12,7 +12,6 @@ export class GetlayerService {
 
 
     constructor(private http: HttpClient) {
-        console.log('Listo para usar')
     }
     get(endpoint) {
         return this.http.get(path + endpoint).pipe(
