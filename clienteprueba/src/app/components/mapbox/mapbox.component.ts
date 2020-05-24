@@ -26,7 +26,7 @@ export class MapboxComponent implements OnInit {
       style: 'mapbox://styles/mapbox/streets-v11',
       center: [-74.08699035644531,
         4.742043976363009], // LNG,LAT
-      zoom: 9 // starting zoom
+      zoom: 9.5 // starting zoom
       });
 
 
