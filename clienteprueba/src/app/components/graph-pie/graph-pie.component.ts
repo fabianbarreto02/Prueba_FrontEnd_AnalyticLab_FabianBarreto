@@ -11,9 +11,11 @@ import {GetlayerService} from '../../services/get_layer.service';
   styleUrls: ['./graph-pie.component.css']
 })
 export class GraphPieComponent implements OnInit {
+  // Variables para carga de label y datos del servicio
   label_get  = [];
   dataNumber = [];
 
+  // Configuración de para metros de la grafica pie
   public pieChartOptions: ChartOptions = {
     responsive: true,
     legend: {
@@ -39,7 +41,9 @@ export class GraphPieComponent implements OnInit {
     },
   ];
 
+  // Servicio para obtener la data del api
   constructor(private getdataService: GetlayerService) {
+    // Metodo para carga de los datos
     this.loadData();
 
   }
@@ -47,6 +51,7 @@ export class GraphPieComponent implements OnInit {
   ngOnInit() {
   }
 
+  // Metodo que utiliza el servicio del api para la información de los sales
   loadData() {
     this.getdataService.get('commerces/graph').subscribe(res => {
       if (res !== null) {
@@ -63,7 +68,7 @@ export class GraphPieComponent implements OnInit {
     });
 
   }
-  // events
+  // evenentos de la grafica
   public chartClicked({ event, active }: { event: MouseEvent, active: {}[] }): void {
     console.log(event, active);
   }

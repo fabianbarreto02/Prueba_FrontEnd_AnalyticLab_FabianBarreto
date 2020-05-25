@@ -7,18 +7,20 @@ import {GetlayerService} from '../../services/get_layer.service';
   styleUrls: ['./tarjetas-info.component.css']
 })
 export class TarjetasInfoComponent implements OnInit {
+  // Variables para cargar la información de los comercios
   names = [];
   address = [];
   phones = [];
   schedules = [];
   days = [];
-
+  // Servicion y carga de data para target 
   constructor(private getdataService: GetlayerService) {
     this.loadData();
   }
   ngOnInit() {
   }
 
+  // Metdodo para carga la informaión en cada target con la información del api dado
   loadData() {
     this.getdataService.get('commerces').subscribe(res => {
       if (res !== null) {

@@ -9,13 +9,14 @@ import { GetlayerService } from '../../services/get_layer.service';
   styleUrls: ['./graph.component.css']
 })
 export class GraphComponent implements OnInit {
+  // Varibale para resivir los datos del servicio
   label_get = [];
   dataNumber = [];
   data_get = [];
 
+  // Definición de los paremetros de la grafica
   public lineChartData: any[] = [{ data: null }];
   public lineChartLabels: Label[] = [];
-
   public lineChartOptions: ChartOptions & { annotation: any } = {
     responsive: true,
     scales: {
@@ -47,16 +48,18 @@ export class GraphComponent implements OnInit {
   };
 
   public lineChartColors: Color[] = [{}];
-
   public lineChartLegend = true;
   public lineChartType = 'line';
 
+  // Definición del servicio
   constructor(private getdataService: GetlayerService) {
+    // Carga la data del servicio
     this.loadData();
   }
 
   ngOnInit() {}
 
+  // Metodo para la carga de datos del sales con el servicion dado
   loadData() {
     this.getdataService.get('commerces/graph').subscribe(res => {
       if (res !== null) {
@@ -85,7 +88,7 @@ export class GraphComponent implements OnInit {
     });
   }
 
-  // // events
+  // Evento para grafica
   public chartClicked({
     event,
     active

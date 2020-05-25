@@ -16,6 +16,7 @@ import {GetlayerService} from './services/get_layer.service';
 import { GraphComponent } from './components/graph/graph.component';
 import { GraphPieComponent } from './components/graph-pie/graph-pie.component';
 import { TarjetasInfoComponent } from './components/tarjetas-info/tarjetas-info.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { TarjetasInfoComponent } from './components/tarjetas-info/tarjetas-info.
     MapboxComponent,
     GraphComponent,
     GraphPieComponent,
-    TarjetasInfoComponent
+    TarjetasInfoComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

@@ -4,6 +4,7 @@ import { environment } from './../../environments/environment';
 import { catchError } from 'rxjs/operators';
 import { throwError } from 'rxjs';
 
+// Servicio con metodo http para traer la información del api de cada comercio
 
 const path = environment.API_SERVICE;
 @Injectable()
