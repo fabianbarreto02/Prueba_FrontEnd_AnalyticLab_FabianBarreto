@@ -1,0 +1,80 @@
+
+.glyphicon {
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    background: #5c7be0;
+    font-size: 30px;
+    border-radius: 10px;
+    border: 2px solid #b8b9e4;
+}
+
+.feature-box {
+    text-align: center;
+    padding: 20px;
+    transition: .5s;
+    margin-bottom: 30px;
+    border: 1px solid #e8e8e8;
+}
+
+.feature-box:hover {
+    box-shadow: 0 4px 8px 0 rgba(142, 204, 255, 0.342), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.feature-box h4 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 25px 0 15px;
+}
+
+.border {
+    background: #e8e8e8;
+    height: 1px;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 45px;
+    float: left;
+}
+
+
+
+
+.paddingTB60 {
+    padding-bottom: 10px;
+    text-align: center;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.paddingTB601 {
+    padding-top: 10px;
+    padding-bottom: 2px;
+    display: block;
+    margin-left: 100px;
+    margin-right: 100px
+}
+
+
+/* Buttons */
+
+.site-btn {
+    font-size: 12px;
+    padding: 13px 20px;
+    border-radius: 5px;
+    border: 1px solid #486de9;
+    min-width: 100px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    color: #0003b4;
+    background-color: transparent;
+    transition: all .25s ease-in-out;
+    margin: 10px 0px 10px 0px;
+}
+
+.site-btn:hover {
+    background: #6eb6e0;
+    border: 1px solid #fff;
+    font-weight: 700px;
+}

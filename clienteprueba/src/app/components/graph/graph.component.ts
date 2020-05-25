@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { ChartDataSets, ChartOptions } from 'chart.js'
+import { ChartDataSets, ChartOptions } from 'chart.js';
 import { Color, Label } from 'ng2-charts';
-import {GetlayerService} from '../../services/get_layer.service';
+import { GetlayerService } from '../../services/get_layer.service';
 
 @Component({
   selector: 'app-graph',
@@ -9,23 +9,21 @@ import {GetlayerService} from '../../services/get_layer.service';
   styleUrls: ['./graph.component.css']
 })
 export class GraphComponent implements OnInit {
-  label_get  = [];
+  label_get = [];
   dataNumber = [];
   data_get = [];
 
-  public lineChartData: any [] = [
-    { data: null },
-  ];
+  public lineChartData: any[] = [{ data: null }];
   public lineChartLabels: Label[] = [];
 
-  public lineChartOptions: (ChartOptions & { annotation: any }) = {
+  public lineChartOptions: ChartOptions & { annotation: any } = {
     responsive: true,
     scales: {
       xAxes: [{}],
       yAxes: [
         {
           id: 'y-axis-0',
-          position: 'left',
+          position: 'left'
         }
       ]
     },
@@ -43,37 +41,35 @@ export class GraphComponent implements OnInit {
             fontColor: 'orange',
             content: 'LineAnno'
           }
-        },
-      ],
-    },
+        }
+      ]
+    }
   };
 
-  public lineChartColors: Color[] = [
-    { },
-  ];
+  public lineChartColors: Color[] = [{}];
 
   public lineChartLegend = true;
   public lineChartType = 'line';
 
-
-  constructor( private getdataService: GetlayerService) {
+  constructor(private getdataService: GetlayerService) {
     this.loadData();
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   loadData() {
     this.getdataService.get('commerces/graph').subscribe(res => {
       if (res !== null) {
         const dataget = <Array<any>>res;
         const numbercomer = dataget.length;
-        for (let i = 0; i < numbercomer; i ++) {
+        for (let i = 0; i < numbercomer; i++) {
           this.label_get.push(dataget[i]['name']);
-          this.dataNumber.push( parseInt(dataget[i]['sales']));
-
+          this.dataNumber.push(parseInt(dataget[i]['sales']));
         }
-        this.lineChartData[0] = { data: this.dataNumber, label: 'Ventas por comercio'};
+        this.lineChartData[0] = {
+          data: this.dataNumber,
+          label: 'Ventas por comercio'
+        };
         this.lineChartLabels = this.label_get;
         this.lineChartColors = [
           {
@@ -83,19 +79,20 @@ export class GraphComponent implements OnInit {
             pointBorderColor: '#fff',
             pointHoverBackgroundColor: '#fff',
             pointHoverBorderColor: 'rgba(3,83,96,1)'
-          },
+          }
         ];
-        }
+      }
     });
-
   }
-
-
-
 
   // // events
-  public chartClicked({ event, active }: { event: MouseEvent, active: {}[] }): void {
+  public chartClicked({
+    event,
+    active
+  }: {
+    event: MouseEvent;
+    active: {}[];
+  }): void {
     console.log(event, active);
   }
-
 }
