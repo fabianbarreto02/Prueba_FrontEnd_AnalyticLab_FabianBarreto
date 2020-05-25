@@ -1,0 +1,12 @@
+<!-- Html para el componente para la grafica pie -->
+<div>
+    <div>
+        <div class="chart">
+            <canvas baseChart [data]="pieChartData" [labels]="pieChartLabels" [chartType]="pieChartType" [options]="pieChartOptions" [colors]="pieChartColors" [legend]="pieChartLegend">
+        </canvas>
+        </div>
+    </div>
+</div>
+<div>
+    <button type="button" class="boton_personalizado" (click)="pieChartLegend=!pieChartLegend">Ocultar Leyenda</button>
+</div>

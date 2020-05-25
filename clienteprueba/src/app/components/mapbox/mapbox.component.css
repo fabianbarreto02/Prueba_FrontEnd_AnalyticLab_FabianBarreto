@@ -1,0 +1,29 @@
+/* Estilos para el componente mapbox */
+#mapa-mapbox {
+    width: 99%;
+    height: 610px;
+    background-color: aliceblue;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    padding: 1%;
+}
+
+.mapboxgl-popup {
+    max-width: 400px;
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+.div1 {
+    background: #2980B9;
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+}
+
+h5 {
+    color: #fafafa;
+    font-weight: normal;
+    font-size: 15px;
+    font-family: Arial;
+}
