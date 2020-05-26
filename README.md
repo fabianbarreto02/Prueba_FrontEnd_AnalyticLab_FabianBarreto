@@ -34,7 +34,7 @@ localhost:4200
 El proyecto se encuentra desplegado en el hosting gratuido Fire Base de google
 
 ```
-https://clienteanalyticlab.web.app/
+https://pruebatecnicaanalyticlabs.web.app/
 ```
 
 ## Construido con 🛠️
